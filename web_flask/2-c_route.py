@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Script that starts a Flask web application
-web application is listening on 0.0.0.0, port 5000
+""" script starts a flask web application
+listening on 0.0.0.0, port 5000
 """
 
 from flask import Flask
@@ -10,20 +10,19 @@ app = Flask("__name__")
 
 @app.route('/', strict_slashes=False)
 def hello():
-    """String to Return"""
+    """Return a given string"""
     return ("Hello HBNB!")
 
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    """String to Return"""
+    """Returns a given string"""
     return ("HBNB")
 
 
 @app.route("/c/<text>", strict_slashes=False)
 def cText(text):
-    """display C followed by the value of the text variable
-    replace underscore _ symbols with a space"""
+    """display C followed bu the value of the text vvariable"""
     return "C {}".format(text.replace("_", " "))
 
 

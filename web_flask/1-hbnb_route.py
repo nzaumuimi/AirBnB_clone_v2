@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Write a script that starts a Flask web application
+"""Write a script that starts a flas web application
 Web application is listening on 0.0.0.0, port 5000
 """
 
@@ -10,13 +10,13 @@ app = Flask("__name__")
 
 @app.route('/', strict_slashes=False)
 def hello():
-    """String to Return"""
+    """Return a given string"""
     return ("Hello HBNB!")
 
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    """ String to Return"""
+    """Returns a given string"""
     return ("HBNB")
 
 
